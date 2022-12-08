@@ -3,8 +3,11 @@ from math import *
 from random import *
 print("Kümne harjutus")
 a=float(input("Aega minutit: "))
-ti=a/60
-print(f"Aeg tundides {round(ti,2)}")
+#ti=(a/60)%60
+ti=(a//60%60)
+ti1=(a%60)
+
+print(ti,ti1)
 print()
 print()
 print()
