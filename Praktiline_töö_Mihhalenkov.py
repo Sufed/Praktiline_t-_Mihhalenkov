@@ -27,7 +27,7 @@ from random import *
 print("Kaheksas harjutus")
 a=randint(1,100) #Сколько залил литров
 b=randint(1,100) #Пройденный километры
-print(f"Külg a={a}\nKülg b={b}\nKülg")
+print(f"a={a}\n b={b}\n")
 T=(a/b)*100
 print(f"Kütusekulu: {round(T,2)}")
 print()
