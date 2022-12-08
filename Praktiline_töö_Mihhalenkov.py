@@ -1,13 +1,13 @@
-﻿#Kümne harjutus #Преобразование времени Пользователь вводит время в минутах Ваша формула находит и выводит часы и минуты Например: введите 72, ответ 1:12
+﻿#Kümnes harjutus #Преобразование времени Пользователь вводит время в минутах Ваша формула находит и выводит часы и минуты Например: введите 72, ответ 1:12
 from math import *
 from random import *
 print("Kümne harjutus")
 a=float(input("Aega minutit: "))
 #ti=(a/60)%60
-ti=(a//60%60)
-ti1=(a%60)
+ti=int(a//60)
+ti1=int(a%60)
 
-print(ti,ti1)
+print(f"{ti}:{ti1}")
 print()
 print()
 print()
@@ -15,11 +15,10 @@ print()
 from math import *
 from random import *
 print("Üheksas harjutus") #Средняя скорость ролика 29,9км/ч Как далеко можно добраться за 24 минуты
-a=29.9 #a=randint(1,100)
-b=24 #b=randint(1,60)
-Pu=a/b
-print(f"Nii palju {round (Pu,2) } km saab sõita {b} min")
-print()
+b=24/60 #b=randint(1,60)
+a=b*29.9 #a=randint(1,100)
+print(f"{a} km {b} h")
+#print(f"Nii palju {t} km saab sõita {b} min")
 print()
 print()
 #Kaheksas harjutus
@@ -28,9 +27,8 @@ from random import *
 print("Kaheksas harjutus")
 a=randint(1,100) #Сколько залил литров
 b=randint(1,100) #Пройденный километры
-с=randint(1,50) #Оставшееся топливо
-print(f"Külg a={a}\nKülg b={b}\nKülg c={с}")
-T=(с/b)*100
+print(f"Külg a={a}\nKülg b={b}\nKülg")
+T=(a/b)*100
 print(f"Kütusekulu: {round(T,2)}")
 print()
 print()
