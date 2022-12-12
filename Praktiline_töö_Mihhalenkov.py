@@ -1,11 +1,61 @@
-﻿#Kümnes harjutus #Преобразование времени Пользователь вводит время в минутах Ваша формула находит и выводит часы и минуты Например: введите 72, ответ 1:12
+﻿#12/12/22
+from math import *
+from random import *
+try:
+    päev=int(input("Mis päev täna on? "))
+    if päev==7:
+        print("Täna on pühapäev.")
+    elif päev==6:
+        print("Täna on laupäev.")
+    elif päev==5:
+        print("Täna on reede.")
+    elif päev==4:
+        print("Täna on neljapäev.")
+    elif päev==3:
+        print("Täna on kolmapäev.")
+    elif päev==2:
+        print("Täna on teisipäev.")
+    elif päev==1:
+        print("Täna on esmaspäev.")
+except:
+    print("MIS PÄEV TÄNA ON???")
+print()
+print()
+print()
+from math import *
+from random import *
+#12/12/22
+try:
+    hinne=int(input("Mis hinne täna sai koolis? "))
+except:
+    print("KURAT!!!")
+if hinne==5:
+    print("Väga hea!")
+elif hinne==4:
+    print("Hea!")
+elif hinne==3:
+    print("Hea")
+elif hinne==2 or hinne==1: #and, or, not (!=) ei võrdu, <, >, >=, <=
+    print("Miite rahuldav!")
+else:
+    print("Viga!")
+#Kümnes harjutus #Преобразование времени Пользователь вводит время в минутах Ваша формула находит и выводит часы и минуты Например: введите 72, ответ 1:12
 from math import *
 from random import *
 print("Kümne harjutus")
-a=float(input("Aega minutit: "))
+try:
+    a=float(input("Aega minutit: "))
+except:
+    print("Vale andmetüüp!")    
 #ti=(a/60)%60
-ti=int(a//60)
-ti1=int(a%60)
+try:
+    ti=int(a//60)
+except:
+    print("Vale andmetüüp!")
+try:
+    ti1=int(a%60)
+except:
+    print("Vale andmetüüp!")
 
 print(f"{ti}:{ti1}")
 print()
@@ -67,11 +117,26 @@ print()
 #Neljandal harjutus
 from math import * 
 print("Neljandal harjutus")
-q=int(input("q pikkus: "))
-w=int(input("w pikkus: "))
-e=int(input("e pikkus: "))
-r=int(input("r pikkus: "))
-t=int(input("t pikkus: "))
+try:
+    q=int(input("q pikkus: "))
+except:
+    print("Vale andmetüüp!")
+try:
+    w=int(input("w pikkus: "))
+except:
+    print("Vale andmetüüp!")
+try:
+    e=int(input("e pikkus: "))
+except:
+    print("Vale andmetüüp!")
+try:
+    r=int(input("r pikkus: "))
+except:
+    print("Vale andmetüüp!")
+try:
+    t=int(input("t pikkus: "))
+except:
+    print("Vale andmetüüp!")
 Sr=(q+w+e+r+t)/5
 print()
 print(f"Keskmine on {Sr}")
@@ -80,8 +145,14 @@ print()
 print()
 #Kolmandal harjutus
 print("Kolmandal harjutus")
-aeg=float(input("Mitu tundi kulus sõiduks? "))
-teepikkus=float(input("Mitu kilomeetrit sõitsid? "))
+try:
+    aeg=float(input("Mitu tundi kulus sõiduks? "))
+except:
+    print("Vale andmetüüp!")
+try:
+    teepikkus=float(input("Mitu kilomeetrit sõitsid? "))
+except:
+    print("Vale andmetüüp!")
 kiirus=aeg/teepikkus
 print()
 print("Sinu kiirus oli " + str(round(kiirus,2)) + " km/h")
@@ -89,8 +160,14 @@ print()
 #Teine harjutus
 from math import * 
 print("Teine harjutus")
-a=float(input("pikkus N: "))
-b=float(input("pikkus M: "))
+try:
+    a=float(input("pikkus N: "))
+except:
+    print("Vale andmetüüp!")
+try:
+    b=float(input("pikkus M: "))
+except:
+    print("Vale andmetüüp!")
 d=sqrt(a**2+b**2)
 print()
 print(f"Maatuki diagonaal on {round(d,2)} m**2")
@@ -100,7 +177,10 @@ print()
 #Esimene harjutus
 from math import * 
 print("Esimene harjutus")
-C=float(input("Ümbermõõt: "))
+try:
+    C=float(input("Ümbermõõt: "))
+except:
+    print("Vale andmetüüp!")
 r=C/(2*pi)
 di=2*r
 print()
